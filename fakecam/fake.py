@@ -61,7 +61,7 @@ cap.set(cv2.CAP_PROP_FPS, 30)
 fake = pyfakewebcam.FakeWebcam('/dev/video2', width, height)
 
 # load the virtual background
-background = cv2.imread("/data/background.jpg")
+background = cv2.imread("./background.jpg")
 background_scaled = cv2.resize(background, (width, height))
 
 # frames forever
