@@ -27,5 +27,5 @@ const http = require('http');
             tf.dispose(image);
         });
     });
-    server.listen(9000);
+    server.listen(9000, "127.0.0.1");
 })();

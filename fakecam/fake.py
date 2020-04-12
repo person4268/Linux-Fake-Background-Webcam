@@ -4,7 +4,7 @@ import numpy as np
 import requests
 import pyfakewebcam
 
-def get_mask(frame, bodypix_url='http://bodypix:9000'):
+def get_mask(frame, bodypix_url='http://127.0.0.1:9000'):
     _, data = cv2.imencode(".jpg", frame)
     r = requests.post(
         url=bodypix_url,

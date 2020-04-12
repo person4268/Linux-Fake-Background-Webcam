@@ -29,23 +29,18 @@ This automatically loads v4l2loopback module at boot, with the specified module 
 ## How to use this repository
 ### Setting up
 1. Replace ``fakecam/background.jpg`` with your own background image. 
-2. Build the Docker image by running ``./build.sh``.
-3. Create the Docker network bridge and containers by running ``./create-container.sh``.
+2. Enter the bodypix directory and run ``npm install``.
+3. Install everything in fakecam/requirements.txt using your preferred method of installing python packages. 
 
 ### Using the virtual webcam
-4. Run the containers by running ``./run-containers.sh``. 
+4. Run ``cd bodypix && node app``, and ``cd fakecam && python3 fake.py`` in another sesion.
 5. Do whatever you need to do, remember that the virtual webcam is at ``/dev/video2``, and your physical webcam should be at ``/dev/video0``. You cannot access the physical webcam when the containers are running. 
-6. Stop the containers by running ``./stop-containers.sh``. 
-
-### Remove the containers
-7. If you want to remove the containers, run ``./remove-containers.sh``.
-8. If you want to remove the Docker images, run ``./remove-images.sh``.
-
-### If you want to change the background image
-If you want to change your background image, do these steps: 1, 2, 7, 3.
+6. Stop the containers by using Ctrl+C on the Python script and then the Node one. 
 
 ## Modification to Elder's original post
 I removed the ``hologram_effect()`` function, because I don't want the hologram effect. I also corrected the command for launching the container instances - the network communication between the container wasn't set up properly. I also replaced his background image to something I took myself. 
 
 ## Afterthoughts
-This whole set up is just so amazingly ridiculous - I cannot believe we are running two container instances with network communication, just for a simple webcam background removal. Someone please make a simpler version... 
+> This whole set up is just so amazingly ridiculous - I cannot believe we are running two container instances with network communication, just for a simple webcam background removal. Someone please make a simpler version.
+
+This is probably simpler.
