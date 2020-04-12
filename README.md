@@ -35,7 +35,7 @@ This automatically loads v4l2loopback module at boot, with the specified module 
 ### Using the virtual webcam
 4. Run ``cd bodypix && node app``, and ``cd fakecam && python3 fake.py`` in another sesion.
 5. Do whatever you need to do, remember that the virtual webcam is at ``/dev/video2``, and your physical webcam should be at ``/dev/video0``. You cannot access the physical webcam when the containers are running. 
-6. Stop the containers by using killing the Python script and then using Ctrl+C on the Node script.
+6. Stop the containers by using killing the Python script, closing anything using the camera and spamming Ctrl+C until it closes (yeah). Then, you can just Ctrl+C the Node script.
 
 ## Modification to Elder's original post
 I removed the ``hologram_effect()`` function, because I don't want the hologram effect. I also corrected the command for launching the container instances - the network communication between the container wasn't set up properly. I also replaced his background image to something I took myself. 
