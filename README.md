@@ -1,3 +1,5 @@
+This fork is unsupported. It used to remove the docker requirement since it was mostly pointless and could easily be run manually, but I think that upstream fixed that. Plus, it's severely out of date by over 100 commits. Just don't use this. 
+
 # Linux-Fake-Background-Webcam
 Video conferencing software support under Linux is relatively poor. The Linux version of Zoom only supports background replacement via chroma key. The Linux version of Microsoft Team does not support background blur. 
 
